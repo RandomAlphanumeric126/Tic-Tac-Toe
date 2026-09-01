@@ -1,9 +1,16 @@
 :root {
    font-family: 'Arial', sans-serif;
 
-   --colors--bg__base     : hsl(0,   0%, 15%);
-   --colors--bg__near     : hsl(0,   0%, 25%);
-   --colors--font__accent : hsl(0, 100%, 50%);
+   --colors--bg__base        : hsl(0,   0%,  15%);
+   --colors--bg__lt          : hsl(0,   0%,  25%);
+   --colors--bg__dk          : hsl(0,   0%,  5%);
+   --colors--font__base      : hsl(0,   0%, 100%);
+   --colors--font__dk        : hsl(0,   0%,  80%);
+   --colors--font__accent    : hsl(0, 100%,  50%);
+   --colors--font__accent_lt : hsl(0, 100%,  70%);
+   --colors--font__accent_dk : hsl(0,  35%,  20%);
+
+   --border-radius           : 10px;
 }
 
 body {
@@ -30,10 +37,13 @@ a {
    color: var(--colors--font__accent);
 }
 
-.opponent-select {
+ul {
    font-size       : 0.85rem;
    font-weight     : bold;
    display         : flex;
+}
+
+.opponent-select {
    justify-content : center;
    gap             : 0.85rem;
 
@@ -43,9 +53,9 @@ a {
       justify-content  : space-evenly;
       gap: 0.2rem;
       align-items      : center;
-      background-color : var(--colors--bg__near);
+      background-color : var(--colors--bg__lt);
       padding          : 0.8rem 1.25rem;
-      border-radius    : 10px;
+      border-radius    : var(--border-radius);
    }
 
    .icon {
@@ -53,7 +63,30 @@ a {
    }
 
    .selected {
-      border: 2px solid var(--colors--font__accent);
-      background-color: color-mix(in srgb, var(--colors--font__accent), transparent 85%);
+      border           : 2px solid var(--colors--font__accent);
+      background-color : var(--colors--font__accent_dk);
    }
+}
+
+.player {
+   display        : flex;
+   flex-direction : column;
+   align-items    : center;
+}
+
+.player-name {
+   color: var(--colors--font__dk);
+}
+
+.player-score {
+   font-size: 1.5rem;
+}
+
+.scoreboard {
+   display          : flex;
+   justify-content  : space-around;
+   background-color : var(--colors--bg__lt);
+   border-radius    : var(--border-radius);
+   margin           : 0.85rem 0;
+   padding          : 1rem;
 }
