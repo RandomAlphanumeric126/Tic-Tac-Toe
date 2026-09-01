@@ -3,7 +3,7 @@
 
    --colors--bg__base        : hsl(0,   0%,  15%);
    --colors--bg__lt          : hsl(0,   0%,  25%);
-   --colors--bg__dk          : hsl(0,   0%,  5%);
+   --colors--bg__dk          : hsl(0,   0%,   5%);
    --colors--font__base      : hsl(0,   0%, 100%);
    --colors--font__dk        : hsl(0,   0%,  80%);
    --colors--font__accent    : hsl(0, 100%,  50%);
@@ -48,16 +48,23 @@ ul {
    display         : flex;
 }
 
+.current-player {
+   text-align  : center;
+   font-size   : 1.15rem;
+   font-weight : bold;
+   margin      : 1.25rem 0;
+}
+
 .game-board {
-   display: grid;
-   grid-template-columns: 3fr 3fr 3fr;
-   grid-template-rows: 3fr 3fr 3fr;
-   aspect-ratio: 1;
-   gap: 0.65rem;
+   display               : grid;
+   grid-template-columns : 3fr 3fr 3fr;
+   grid-template-rows    : 3fr 3fr 3fr;
+   aspect-ratio          : 1;
+   gap                   : 0.65rem;
 
    > li {
-      background-color: var(--colors--bg__lt);
-      border-radius: var(--border-radius);
+      background-color : var(--colors--bg__lt);
+      border-radius    : var(--border-radius);
    }
 }
 
