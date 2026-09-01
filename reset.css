@@ -114,7 +114,6 @@
    which causes issues with flex-shrink, so... */
 /* Reset the baked-in width applied to form elements */
    input,
-   button,
    textarea,
    select {
       width: max(3rem, 100%);
