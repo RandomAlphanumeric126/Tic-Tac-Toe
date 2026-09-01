@@ -11,6 +11,9 @@
    --colors--font__accent_dk : hsl(0,  35%,  20%);
 
    --border-radius           : 10px;
+
+   --text-shadow             : 2px 2px 4px hsla(0, 0%, 0%, 0.5);
+   --box-shadow              : 1px 2px 4px hsla(0, 0%, 0%, 0.4);
 }
 
 body {
@@ -21,15 +24,17 @@ body {
 }
 
 main {
-   padding : 1.25rem;
-   flex    : 1;
+   padding   : 1.25rem;
+   flex      : 1;
+   width     : 100%;
+   max-width : 400px;
 }
 
 h1 {
-   font-size   : 3.5rem;
-   text-align  : center;
-   text-shadow :  2px 2px 4px hsla(0, 0%, 0%, 0.5);
-   margin-bottom: 1.25rem;
+   font-size     : 3.5rem;
+   text-align    : center;
+   text-shadow   :  var(--text-shadow);
+   margin-bottom : 1.25rem;
 }
 
 h1,
@@ -72,6 +77,7 @@ ul {
    display        : flex;
    flex-direction : column;
    align-items    : center;
+   gap            : 0.2rem;
 }
 
 .player-name {
@@ -89,4 +95,5 @@ ul {
    border-radius    : var(--border-radius);
    margin           : 0.85rem 0;
    padding          : 1rem;
+   box-shadow       : var(--box-shadow);
 }
