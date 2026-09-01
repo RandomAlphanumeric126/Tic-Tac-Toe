@@ -53,11 +53,11 @@ ul {
    grid-template-columns: 3fr 3fr 3fr;
    grid-template-rows: 3fr 3fr 3fr;
    aspect-ratio: 1;
-   gap: 0.5rem;
+   gap: 0.65rem;
 
    > li {
       background-color: var(--colors--bg__lt);
-      border-radius: var(--border-radius)
+      border-radius: var(--border-radius);
    }
 }
 
